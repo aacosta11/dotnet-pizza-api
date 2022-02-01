@@ -36,7 +36,7 @@ public class PizzaController : ControllerBase
     }
 
     // PUT a pizza
-    [HttpPut]
+    [HttpPut("{id}")]
     public IActionResult Update(int id, Pizza pizza)
     {
         if (id != pizza.Id)
@@ -49,7 +49,7 @@ public class PizzaController : ControllerBase
     }
 
     // DELETE a pizza
-    [HttpDelete] 
+    [HttpDelete("{id}")] 
     public IActionResult Delete(int id)
     {
         var pizzaToDelete = PizzaService.Get(id);
