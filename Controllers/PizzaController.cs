@@ -57,5 +57,5 @@ public class PizzaController : ControllerBase
             return NotFound();
         PizzaService.Delete(id);
         return NoContent();
-    }   
+    }
 }
